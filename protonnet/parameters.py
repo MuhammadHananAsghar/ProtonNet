@@ -1,0 +1,17 @@
+import os
+import numpy as np
+
+
+IMAGE_SIZE = (128, 128, 3)
+EMB_SIZE = 256
+BATCH_SIZE = 64
+EPOCHS = 100
+STEPS_PER_EPOCHS = 200
+LEARNING_RATE = 0.0001
+ALPHA = 0.5
+
+DATASET = ""
+EMBEDDING_MODEL_NAME = "embedding_model"
+DATASET_DIRS = np.array(os.listdir(DATASET))
+MODEL_SAVE_PATH_H5 = ""
+TENSORBOARD_LOGS = "Logs"
