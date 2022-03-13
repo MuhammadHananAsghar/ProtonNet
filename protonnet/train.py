@@ -17,6 +17,8 @@ print(f"""
 	Batch Size: {BATCH_SIZE}
 	Image Size: {IMAGE_SIZE}
 	Embedding Size: {EMB_SIZE}
+  	Disclaimer: I have tested if you got any error related to datagenerator then make sure that you have minimum to two images per directory.
+  Otherwise it will give error.
 	*---------------------------------------*
 	""")
 
@@ -24,12 +26,13 @@ print(f"""
 protonnet = proton_net()
 
 path = os.path.join(os.getcwd(), "weights")
-if os.path.exits(path):
-	protonnet = tf.keras.models.load_model(os.path.join(path, "ProtonNet"),
-                                      custom_objects={'triplet_loss': triplet_loss})
+if os.path.exists(path):
+  protonnet = tf.keras.models.load_model(os.path.join(path, "ProtonNet"), custom_objects={'triplet_loss': triplet_loss})
+  print("Weights Loaded.")
 else:
-	opt = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
-	protonnet.compile(loss=triplet_loss, optimizer=opt)
+  opt = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE)
+  protonnet.compile(loss=triplet_loss, optimizer=opt)
+  print("New Model Compiled.")
 
 checkpoint = tf.keras.callbacks.ModelCheckpoint(MODEL_SAVE_PATH_H5, verbose=1)
 tensorboard = tf.keras.callbacks.TensorBoard(log_dir=TENSORBOARD_LOGS)
