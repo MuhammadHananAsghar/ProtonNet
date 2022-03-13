@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import pathlib
 import sys
+import random
 
 _parentdir = pathlib.Path(__file__).parent.parent.resolve()
 sys.path.insert(0, str(_parentdir))
