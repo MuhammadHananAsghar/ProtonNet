@@ -37,7 +37,7 @@ H5 Weights(Not For Training):
 ```link
 https://drive.google.com/file/d/1LNpZK0Kk3IiUB23kzWirYZhlDS-JQcbo/view?usp=sharing
 ```
-
+Make weights folder in the protonnet folder and Copy weights folder ```ProtonNet``` in it.
 ```
 Created with (Love). By Muhammad Hanan Asghar
 ```
