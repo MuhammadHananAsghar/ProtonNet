@@ -30,4 +30,4 @@ def predict(positive_path, negative_path, model, triplet):
   return True
 
 
-prediction = predict("/content/madhuri.jpg", "/content/sunny_leone.png", proton_net, triplet_loss)
+prediction = predict("/content/.jpg", "/content/.png", proton_net, triplet_loss)
